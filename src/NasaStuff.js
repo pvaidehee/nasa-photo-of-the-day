@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import Apod from "./Apod";
 import Head from "./Head";
 import axios from "axios";
+
 // nasa api https://api.nasa.gov/planetary/apod
+
 
 function NasaStuff(){
     const [apod, setApod] = useState({});
@@ -14,7 +16,7 @@ function NasaStuff(){
     '2019-2-28'
   ];
 
-  //first slide
+  //first 
     useEffect(() => {
       axios
         .get(`https://api.nasa.gov/planetary/apod?date=${dates[0]}&api_key=87qfeH0SHge3BLvWRDlbFTSOcIkYlaJ04ZF7yHB6`)
@@ -26,7 +28,7 @@ function NasaStuff(){
           console.log(err);
         });
     }, []);
-    //second slide
+    //second 
     useEffect(() => {
       axios
         .get(`https://api.nasa.gov/planetary/apod?date=${dates[1]}&api_key=87qfeH0SHge3BLvWRDlbFTSOcIkYlaJ04ZF7yHB6`)
@@ -38,7 +40,7 @@ function NasaStuff(){
           console.log(err);
         });
     }, []);
-    //third slide
+    //third 
     useEffect(() => {
       axios
         .get(`https://api.nasa.gov/planetary/apod?date=${dates[2]}&api_key=87qfeH0SHge3BLvWRDlbFTSOcIkYlaJ04ZF7yHB6`)
@@ -79,6 +81,7 @@ function NasaStuff(){
                 explanation = {apod2.explanation} 
                 />
                 
+               
 
 
 
